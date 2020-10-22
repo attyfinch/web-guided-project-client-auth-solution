@@ -1,6 +1,8 @@
 import React from "react";
-import { axiosWithAuth } from "../utils/axiosWithAuth";
+import axios from "axios";
+
 import { withRouter } from "react-router";
+import { withHistory } from "react-router-dom";
 
 class Login extends React.Component {
   state = {
@@ -22,8 +24,8 @@ class Login extends React.Component {
   login = (e) => {
     e.preventDefault();
     // axiosWithAuth ==> ?? an axios instance; .post() ==> ?? promise
-    axiosWithAuth()
-      .post("/login", this.state.credentials)
+    axios
+      .post("http://localhost:5000/api/login", this.state.credentials)
       .then((res) => {
         localStorage.setItem("token", res.data.payload);
         // redirect to the apps main page?
