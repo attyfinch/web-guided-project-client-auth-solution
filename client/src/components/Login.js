@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 
 import { withRouter } from "react-router";
-import { withHistory } from "react-router-dom";
 
 class Login extends React.Component {
   state = {
@@ -22,13 +21,10 @@ class Login extends React.Component {
   };
 
   login = (e) => {
-    e.preventDefault();
-    // axiosWithAuth ==> ?? an axios instance; .post() ==> ?? promise
     axios
       .post("http://localhost:5000/api/login", this.state.credentials)
       .then((res) => {
         localStorage.setItem("token", res.data.payload);
-        // redirect to the apps main page?
         this.props.history.push("/protected");
       })
       .catch((err) => console.log(err));
