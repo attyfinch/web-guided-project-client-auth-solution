@@ -2,6 +2,8 @@
 
 ## [Training Kit](https://github.com/LambdaSchool/Full-Stack-Web-Curriculum/tree/main/03-WebApplications-II/Sprint%2003%20-%20Advanced%20Web%20Applications/Module%202%20-%20Client-Side%20Auth)
 
+### [Previous Lesson Plan](https://github.com/LambdaSchool/Web-GuidedProject-ClientSideAuth)
+
 ----
 
 ## Objectives
