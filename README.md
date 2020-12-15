@@ -227,17 +227,19 @@ export const PrivateRoute = ({component: Component}, ...rest) => {
 Hope you all enjoyed today's guided Lesson!
 A reminder if that office hours are from 2:30 - 3:30 Lambda Time. Don't forget to complete the days Check for Understanding and Pulse Checks! 
 
-Module Project
-https://github.com/LambdaSchool/HTTP-Movies-Assignment
+Module Project: https://github.com/LambdaSchool/Auth-Friends
+Module Slides:
+Module Video: 
 
 Here is a review of today's material.
 
 Key Terminology
-* 📝 *Authentication* - [description](#)
-* 📝 *Authorization* - [description](#)
-* 📝 *http headers* - [description](#)
-* 📝 *jwt tokens* - [description](#)
-* 📝 *axios.create* - [description](#)
+* 📝 *...rest* - [A means to get capture the remaining values within a javascript array or object easily.](https://medium.com/wesionary-team/spread-and-rest-operator-in-javascript-db3f15cec185)
+* 📝 *Route* - [A react router component that allows programmers to connect a component to a url path](https://reactrouter.com/web/api/Route)
+* 📝 *axios.create* - [A means to create a stub of an axios call with preset values attached](https://masteringjs.io/tutorials/axios/create)
+* 📝 *jwt tokens* - [The current web standard for encrypted authentication tokens](https://dzone.com/articles/what-is-jwt-token)
 
 Key Concepts
-* 📝 *concept* - [description](#)
+* 📝 *Authentication* - [The process for identifying user identity.](https://www.youtube.com/watch?v=woNZJMSNbuo)
+* 📝 *Authorization* - [The process for identifying user permissions.](https://www.youtube.com/watch?v=I0poT4UxFxE)
+* 📝 *http headers* - [Additional data added to http requests for interperation within your backend code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
