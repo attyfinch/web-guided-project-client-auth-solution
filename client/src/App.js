@@ -13,6 +13,7 @@ function App() {
       .post("http://localhost:5000/api/logout", {userToken:localStorage.getItem('token')})
       .then((res) => {
         localStorage.removeItem("token");
+        window.location.href = "/login";
       })
       .catch((err) => console.log(err));
   };

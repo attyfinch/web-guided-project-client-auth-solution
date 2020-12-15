@@ -36,7 +36,7 @@ By the end of this module, learners should be able to:
 ----
 
 ## Guided Project Zoom Invitation:
-> Unit 3 | Sprint 1 | **Module 1: React Lifecycle**
+> **Unit 3 | Sprint 3 | Module 2: React Lifecycle**
 > _______________________________________________________
 > Zoom Link : *insert zoom link*
 > Slido: *insert slido link*
@@ -73,201 +73,147 @@ These are the questions used internally to check student understanding. Students
 * <Link />
 * <Redirect />
 
-
-
-
 ## Guided Project Outline
 
-### PrivateRoute
-(May need to _breifly_ cover `<Switch />` if students haven't seen it)
-1. Look through App.js. Note that there are a few routes, one of which we want to make a protected route. In order to do that, we will build a `PrivateRoute` component
-2. Create a `PrivateRoute.js` file. In the file, create a basic functional component
-3. Tell the students that there are three requirements for this component:
+### Module Review
+* The beginings of covering security
+* Focusing on the clientside of that path
 
-```javascript
-import React from 'react';
-// Requirements:
-// 1. It has the same API as <Route />.
-// 2. It renders a <Route /> and passes all the props through to it.
-// 3. It checks if the user is authenticated, if they are, it renders
-// the “component” prop. If not, it redirects the user to /login.
-const PrivateRoute = (props) => {
-  return ();
-};
-export default PrivateRoute;
+### Define Authentication
+* The process of determining the identity
+* Not the same as authorization
+
+### Walkthrough of Authentication Workflow
+* Start with login.
+* Handle the request
+* Handle logout.
+
+### Indicate JWT
+* jwt.io
+* Indicate that these are one way encrption
+
+### Take a tour of our server code
+* Express server
+* Indicate each endpoints
+* Indicate the login endpoint
+* Indicate the request
+* Indicate the logout
+
+### Take a tour of our client code
+* Indicate login, logout, and protected page.
+* Tour App.js, Login.js and GasPrices.js
+
+### BREAK
+
+### Start with our login process
+* Makes sure that the server is running.
+* Navigate to the Login component.
+* Discuss where we locate the login code.
+* Add in click handling.
+* Prompt students to add in an axios call to get a post response from login.
+* Go over result:
+```js
+  axios.post('http://localhost:5000/api/login', this.state)
+    .then(res=>{
+      console.log(res);
+    })
 ```
+* Notice that we get different results if we pass in correct or incorrect data.
+* Notice that on correct logins we get back a token.
+* Prompt how we can save our login token - localStorage.
 
-We'll look at these one at a time
+### Brief Review of LocalStorage
+* localStorage.setItem(key, value)
+* localStorage.getItem(key)
+* localStorage.removeItem(key)
+* implement localStorage for storing token
 
-4. Requirement one - a component's API is how we "interface" with that component. In other words, when we render it, what props do we pass to it? 
-    - This Component needs to be able to interface the same way as the Route component (accept the same props as Route)
-    - We will do this is a pretty tricky way - We will deconstruct props, rename the `component` prop as `Component` so that we can render it in jsx, then we will "reconstruct" all the remaining props in an object called `rest`
-```javascript
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  return ();
-};
-export default PrivateRoute;
-```
-    - Doing this let's us render `PrivateRoute` in App.js in place of `Route`, and pass it the same props as `Route`
+### Handle login redirect
+* this.props.history.push('/protected');
 
-5. Requirement Two - Render `Route` and spread in `rest` to pass it all the props that we passed into `PrivateRoute`
-```javascript
-import React from 'react';
-import { Route } from 'react-router-dom';
-// Requirements:
-// 1. It has the same API as <Route />.
-// 2. It renders a <Route /> and passes all the props through to it.
-// 3. It checks if the user is authenticated, if they are, it renders
-// the “component” prop. If not, it redirects the user to /login.
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  return (
-    <Route {...rest} />
-  );
-};
-export default PrivateRoute;
-```
+### BREAK
 
-6. Requirement Three - render the `Component` in the render prop of `Route`. In the callback function we pass into render, we will check localStorage to see if there is a token saved there, which would mean that the user is logged in. If there is, we will render `Component`. If not, we will use the `Redirect` component to redirect the user to '/login'
-```javascript
-import React from 'react';
-import { Route, Redirect, withRouter } from 'react-router-dom';
-// Requirements:
-// 1. It has the same API as <Route />.
-// 2. It renders a <Route /> and passes all the props through to it.
-// 3. It checks if the user is authenticated, if they are, it renders
-// the “component” prop. If not, it redirects the user to /login.
-const PrivateRoute = ({ component: Component, errorStatusCode, ...rest }) => {
-  return (
-    <Route
-      {...rest}
-      render={() => {
-        if (localStorage.getItem('token')) {
-          return <Component />;
-        } else {
-          // redirect
-          console.log('redirecting!!!');
-          return <Redirect to="/login" />;
-        }
-      }}
-    />
-  );
-};
-export default PrivateRoute;
-```
-7. In `App.js`, import `PrivateRoute` and replace the `Route` component for the protected route with `PrivateRoute`. Now you can test your app by going to "localhost:3000/protected" to see if it re-routes you to the login page.
-```javascript
-<PrivateRoute exact path="/protected" component={GasPrices} />
-<Route path="/login" component={Login} />
-```
-
-#### Login functionality
-8. In `Login.js` look through what we have. Note that the form has an onSubmit handler calling a login function. We'll build that now.
-    - It will take in the event and call preventDefault.
-    - It needs to make a post request to the server to login
-    - It needs to add the returned token to localStorage
-```javascript
-import React from 'react';
-
-class Login extends React.Component {
-  state = {
-    credentials: {
-      username: '',
-      password: ''
-    }
-  };
-
-  handleChange = e => {
-    this.setState({
-      credentials: {
-        ...this.state.credentials,
-        [e.target.name]: e.target.value
-      }
-    });
-  };
-
-  login = e => {
-    e.preventDefault();
-    axios
-      .post('/login', this.state.credentials)
-      .then(res => {
-        localStorage.setItem('token', res.data.payload);
-        // redirect to the apps main page?
-        this.props.history.push('/protected');
-      })
-      .catch(err => console.log(err));
-  };
-
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.login}>
-          <input
-            type="text"
-            name="username"
-            value={this.state.credentials.username}
-            onChange={this.handleChange}
-          />
-          <input
-            type="password"
-            name="password"
-            value={this.state.credentials.password}
-            onChange={this.handleChange}
-          />
-          <button>Log in</button>
-        </form>
-      </div>
-    );
-  }
-}
-
-export default Login;
-```
-
-### Axios Config
-9. Create a `axiosWithAuth.js` file
-10. Build and export a function that returns the `.create()` method on `axios` to create a new instance of axios that we can use throughout our app
-  - Pass in the config object with a baseUrl and authentication header
-  
-```javascript
-import axios from 'axios';
-
-// Build a module that "creates" a new "instance" of the axios object
-// - baseURL
-// - headers object -> authorization header with the token
-
-export const axiosWithAuth = () => {
-  const token = localStorage.getItem('token');
-
-  return axios.create({
-    baseURL: 'http://localhost:5000/api',
+### Handle authentiation request
+* Note that we want to load data immediately
+* Add in axios call to getData
+```js
+  axios.get("http://localhost:5000/api/data", {
     headers: {
-      Authorization: token
+      authorization: localStorage.getItem("token");
     }
+  })
+```
+* Get data and add it to state.
+```js
+this.setState({
+  gasPrices: req.data.data
+})
+```
+
+### Discuss login path
+* We have a function for logout
+* Add an axios call for logout
+```js
+  axios
+    .post('http://localhost:5000/api/logout')
+    .then(req=>{
+      console.log(req);
+    })
+```
+* Make sure to delete our token as well.
+* Redirect
+```js
+  window.location.href = "/login"
+```
+
+### Make an axios util for authentintication api calls
+* Make utils folder
+* axiosWithAuth.js
+* Add a util that returns an axios request with Auth sent.
+```js
+export const axiosWithAuth = ()=> {
+  const token = localStorage.getItem('token');
+  return axios.create({
+    headers:{
+      authorization: token
+    },
+    baseURL: 'http://localhost:5000/api'
   });
-};
+}
+```
+* Import in axiosWithAuth for all requests.
+
+### BREAK
+
+### Introduce Private Routes as a concept
+* It is good that our data is protected
+* We also don't want user to access pages with protected data (potenially) on them.
+* Be good to make a general util for protecting pages.
+* Similar to a custom hook.
+
+### Build PrivateRoute
+* Add PrivateRoute.js as a component.
+* import react and route.
+* create privateRoute function
+```js
+export const PrivateRoute = ({component: Component}, ...rest) => {
+  return <Route 
+    {...rest}
+    render={(props)=>{
+      if (localStorage.getItem('token')) {
+        return <Component {...props}/>;
+      } else {
+        return <Redirect to="/login"/>;
+      }
+    }
+  />
+}
+```
+* Implement PrivateRoute
+```js
+  <PrivateRoute exact path="/protected" component={GasPrices}/>
 ```
 
-#### Getting data with an authentication token:
-11. In `GasPrices.js` note that we are calling the `getData` function in componentDidMount. We still need to build that out.
-    - instead of the axios.get call use `axiosWithAuth().get`
-```javascript
-  getData = () => {
-    axiosWithAuth()
-      .get('/data')
-      .then(res => {
-        this.setState({
-          gasPrices: res.data.data.filter(
-            price =>
-              price.type === 'Gasoline - Regular' &&
-              (price.location === 'US' || price.location === 'State of Hawaii')
-          )
-        });
-      })
-      .catch(err => console.log(err));
-  };
-```
-
-12. After you finish this, go to the app, open the dev tools and login. You should see the chart built out now. Go to the network tab and find the network request called 'data'. Show that there is the authentication header with the token passed to it. That's how the server was able to authenticate the user.
 
 
 ### Module Project Review
@@ -279,7 +225,7 @@ export const axiosWithAuth = () => {
 
 ## After Class Message
 Hope you all enjoyed today's guided Lesson!
-A reminder if that office hours are from 3:30 - 4:30 Lambda Time. Don't forget to complete the days Check for Understanding and Pulse Checks! 
+A reminder if that office hours are from 2:30 - 3:30 Lambda Time. Don't forget to complete the days Check for Understanding and Pulse Checks! 
 
 Module Project
 https://github.com/LambdaSchool/HTTP-Movies-Assignment
@@ -287,7 +233,11 @@ https://github.com/LambdaSchool/HTTP-Movies-Assignment
 Here is a review of today's material.
 
 Key Terminology
-* 📝 *term* - [description](#)
+* 📝 *Authentication* - [description](#)
+* 📝 *Authorization* - [description](#)
+* 📝 *http headers* - [description](#)
+* 📝 *jwt tokens* - [description](#)
+* 📝 *axios.create* - [description](#)
 
 Key Concepts
 * 📝 *concept* - [description](#)
