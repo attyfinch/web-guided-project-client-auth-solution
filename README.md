@@ -68,10 +68,10 @@ These are the questions used internally to check student understanding. Students
 * Authorization
 
 #### What component does PrivateRoute replace to reroute users from a specific path if they are not authenticated?
-* <Switch />
-* **<Route />**
-* <Link />
-* <Redirect />
+* Switch
+* **Route**
+* Link
+* Redirect
 
 ## Guided Project Outline
 
