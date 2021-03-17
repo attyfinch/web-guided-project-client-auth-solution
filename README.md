@@ -17,21 +17,23 @@ By the end of this module, learners should be able to:
 ## Instructor Resources
 * 🐙 [Guided Project Starter](https://github.com/LambdaSchool/web-guided-project-client-auth)
 * 🐙 [Guided Project Solution](https://github.com/LambdaSchool/web-guided-project-client-auth-solution)
-* 🐙 [Module Project](https://github.com/LambdaSchool/React-Testing-TV-Show)
-* 🐙 [Module Project Solution](https://github.com/LambdaSchool/HTTP-Movies-Assignment)
+* 🐙 [Module Project](https://github.com/LambdaSchool/web-module-project-client-auth)
+* 🐙 [Module Project Solution](https://github.com/LambdaSchool/web-module-project-client-auth-solution)
 
 ----
 
 ## Guided Project Slack Message
+> **Welcome Unit 3!**
 > 1. Clone without forking the following repo: https://github.com/LambdaSchool/web-guided-project-client-auth
 > 2. Navigate into both the server and client folders and run npm i to load dependences.
 >
 > :point_right: Technical issues spinning up the project? Please head over to the help channel!
+>
 > :point_right: If you fall behind during lecture and wish to catch up:
 >
-> git fetch && git reset --hard origin/lecture
+> `git fetch && git reset --hard origin/lecture`
 >
-> :point_right: Slido event: https://app.sli.do/event/msea4w8q
+> :point_right: Slido event: **Enter slido link**
 
 ----
 
@@ -41,7 +43,7 @@ By the end of this module, learners should be able to:
 > Zoom Link : *insert zoom link*
 > Slido: *insert slido link*
 > Guided Project: https://github.com/LambdaSchool/web-guided-project-client-auth
-> Module Project: https://github.com/LambdaSchool/HTTP-Movies-Assignment
+> Module Project: https://github.com/LambdaSchool/web-module-project-client-auth
 
 ----
 
@@ -227,9 +229,7 @@ export const PrivateRoute = ({component: Component}, ...rest) => {
 Hope you all enjoyed today's guided Lesson!
 A reminder if that office hours are from 2:30 - 3:30 Lambda Time. Don't forget to complete the days Check for Understanding and Pulse Checks! 
 
-Module Project: https://github.com/LambdaSchool/Auth-Friends
-Module Slides:
-Module Video: 
+Module Project: https://github.com/LambdaSchool/web-module-project-client-auth
 
 Here is a review of today's material.
 
