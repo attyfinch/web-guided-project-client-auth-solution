@@ -235,6 +235,9 @@ Here is a review of today's material.
 
 Key Terminology
 * 📝 *...rest* - [A means to get capture the remaining values within a javascript array or object easily.](https://medium.com/wesionary-team/spread-and-rest-operator-in-javascript-db3f15cec185)
+* 📝 *Redirect Route* - [A redirect method used through react-router.](https://medium.com/@alexfarmer/redirects-in-react-router-dom-46198938eedc)
+* 📝 *this.history redirect* - [A redirect method used through Route props.](https://www.codesd.com/item/react-this-props-history-push-does-not-redirect.html)
+* 📝 *window.location redirect* - [A redirect method used through the windows location object.](https://developer.mozilla.org/en-US/docs/Web/API/Window/location)
 * 📝 *Route* - [A react router component that allows programmers to connect a component to a url path](https://reactrouter.com/web/api/Route)
 * 📝 *axios.create* - [A means to create a stub of an axios call with preset values attached](https://masteringjs.io/tutorials/axios/create)
 * 📝 *jwt tokens* - [The current web standard for encrypted authentication tokens](https://dzone.com/articles/what-is-jwt-token)
