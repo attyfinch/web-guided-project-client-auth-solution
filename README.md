@@ -226,20 +226,27 @@ export const PrivateRoute = ({component: Component}, ...rest) => {
 ----
 
 ## After Class Message
-Hope you all enjoyed today's guided Lesson!
-A reminder if that office hours are from 2:30 - 3:30 Lambda Time. Don't forget to complete the days Check for Understanding and Pulse Checks! 
+**Hope you all enjoyed today's guided Lesson!**
+**A reminder if that office hours are from 2:30 - 3:00 Lambda Time.** 
+**Don't forget to complete the days Check for Understanding and Pulse Checks!**
 
+**Here is a review of today's material.**
+
+### Module Materials
 Module Project: https://github.com/LambdaSchool/web-module-project-client-auth
+GP Slides:https://docs.google.com/presentation/d/1pWlfJhuZpeX054EgZGjElnWuzNPX2YQ1UXkUSw9QXBk/edit?usp=sharing
+GP Video: (processing) 
+Yesterday's Module Project Review: https://www.loom.com/share/e01d193711004a64ba265329f5337329 PW: lSwXpF
+Alternative GP Video: [Dustin Myers](https://youtu.be/ATr7QQP7lw4) | [Josh Jacobson](https://youtu.be/0AvJFNiqhD4)| [Warren C. Longmire](https://youtu.be/zVSH2n1wZCY) | [Brian Kirkby](https://youtu.be/hGICwuTH6Ag)
 
-Here is a review of today's material.
 
-Key Terminology
+### Key Terminology
 * 📝 *...rest* - [A means to get capture the remaining values within a javascript array or object easily.](https://medium.com/wesionary-team/spread-and-rest-operator-in-javascript-db3f15cec185)
 * 📝 *Route* - [A react router component that allows programmers to connect a component to a url path](https://reactrouter.com/web/api/Route)
 * 📝 *axios.create* - [A means to create a stub of an axios call with preset values attached](https://masteringjs.io/tutorials/axios/create)
 * 📝 *jwt tokens* - [The current web standard for encrypted authentication tokens](https://dzone.com/articles/what-is-jwt-token)
 
-Key Concepts
+### Key Concepts
 * 📝 *Authentication* - [The process for identifying user identity.](https://www.youtube.com/watch?v=woNZJMSNbuo)
 * 📝 *Authorization* - [The process for identifying user permissions.](https://www.youtube.com/watch?v=I0poT4UxFxE)
 * 📝 *http headers* - [Additional data added to http requests for interperation within your backend code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
