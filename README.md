@@ -234,7 +234,7 @@ export const PrivateRoute = ({component: Component}, ...rest) => {
 
 ### Module Materials
 Module Project: https://github.com/LambdaSchool/web-module-project-client-auth
-GP Slides:https://docs.google.com/presentation/d/1pWlfJhuZpeX054EgZGjElnWuzNPX2YQ1UXkUSw9QXBk/edit?usp=sharing
+GP Slides: https://docs.google.com/presentation/d/1pWlfJhuZpeX054EgZGjElnWuzNPX2YQ1UXkUSw9QXBk/edit?usp=sharing
 GP Video: (processing) 
 Yesterday's Module Project Review: https://www.loom.com/share/e01d193711004a64ba265329f5337329 PW: lSwXpF
 Alternative GP Video: [Dustin Myers](https://youtu.be/ATr7QQP7lw4) | [Josh Jacobson](https://youtu.be/0AvJFNiqhD4)| [Warren C. Longmire](https://youtu.be/zVSH2n1wZCY) | [Brian Kirkby](https://youtu.be/hGICwuTH6Ag)
