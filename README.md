@@ -239,7 +239,6 @@ GP Video: (processing)
 Yesterday's Module Project Review: https://www.loom.com/share/e01d193711004a64ba265329f5337329 PW: lSwXpF
 Alternative GP Video: [Dustin Myers](https://youtu.be/ATr7QQP7lw4) | [Josh Jacobson](https://youtu.be/0AvJFNiqhD4)| [Warren C. Longmire](https://youtu.be/zVSH2n1wZCY) | [Brian Kirkby](https://youtu.be/hGICwuTH6Ag)
 
-
 ### Key Terminology
 * 📝 *...rest* - [A means to get capture the remaining values within a javascript array or object easily.](https://medium.com/wesionary-team/spread-and-rest-operator-in-javascript-db3f15cec185)
 * 📝 *Redirect Route* - [A redirect method used through react-router.](https://medium.com/@alexfarmer/redirects-in-react-router-dom-46198938eedc)
