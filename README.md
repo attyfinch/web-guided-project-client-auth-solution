@@ -33,15 +33,15 @@ By the end of this module, learners should be able to:
 >
 > `git fetch && git reset --hard origin/lecture`
 >
-> :point_right: Slido event: **Enter slido link**
+> :point_right: Slido event: https://app.sli.do/event/msea4w8q
 
 ----
 
 ## Guided Project Zoom Invitation:
 > **Unit 3 | Sprint 3 | Module 2: React Lifecycle**
 > _______________________________________________________
-> Zoom Link : *insert zoom link*
-> Slido: *insert slido link*
+> Zoom Link: https://lambdaschool.zoom.us/j/3076367334
+> Slido: https://app.sli.do/event/msea4w8q
 > Guided Project: https://github.com/LambdaSchool/web-guided-project-client-auth
 > Module Project: https://github.com/LambdaSchool/web-module-project-client-auth
 
@@ -234,8 +234,11 @@ export const PrivateRoute = ({component: Component}, ...rest) => {
 
 ### Module Materials
 Module Project: https://github.com/LambdaSchool/web-module-project-client-auth
+
 GP Slides: https://docs.google.com/presentation/d/1pWlfJhuZpeX054EgZGjElnWuzNPX2YQ1UXkUSw9QXBk/edit?usp=sharing
-Yesterday's Module Project Review: https://www.loom.com/share/e01d193711004a64ba265329f5337329 PW: lSwXpF
+
+Monday's Module Project Review: https://www.loom.com/share/e01d193711004a64ba265329f5337329 PW: lSwXpF
+
 Alternative GP Video: [Dustin Myers](https://youtu.be/ATr7QQP7lw4) | [Josh Jacobson](https://youtu.be/0AvJFNiqhD4)| [Warren C. Longmire](https://youtu.be/zVSH2n1wZCY) | [Brian Kirkby](https://youtu.be/hGICwuTH6Ag)
 
 ### Key Terminology
@@ -248,6 +251,7 @@ Alternative GP Video: [Dustin Myers](https://youtu.be/ATr7QQP7lw4) | [Josh Jacob
 * 📝 *jwt tokens* - [The current web standard for encrypted authentication tokens](https://dzone.com/articles/what-is-jwt-token)
 
 ### Key Concepts
+* 📝 *Token Saving* - [A great writeup on techniques in saving authentication tokens.](https://medium.com/@ryanchenkie_40935/react-authentication-how-to-store-jwt-in-a-cookie-346519310e81)
 * 📝 *Authentication* - [The process for identifying user identity.](https://www.youtube.com/watch?v=woNZJMSNbuo)
 * 📝 *Authorization* - [The process for identifying user permissions.](https://www.youtube.com/watch?v=I0poT4UxFxE)
 * 📝 *http headers* - [Additional data added to http requests for interperation within your backend code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
