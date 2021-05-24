@@ -12,6 +12,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
       {...rest}
+      // exact path=""
       render={(props) => {
         if (localStorage.getItem("token")) {
           // if token is in localstorage, render the given component
