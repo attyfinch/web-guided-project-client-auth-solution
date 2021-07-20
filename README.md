@@ -258,3 +258,6 @@ Alternative GP Video: [Dustin Myers](https://youtu.be/ATr7QQP7lw4) | [Josh Jacob
 * 📝 *Authentication* - [The process for identifying user identity.](https://www.youtube.com/watch?v=woNZJMSNbuo)
 * 📝 *Authorization* - [The process for identifying user permissions.](https://www.youtube.com/watch?v=I0poT4UxFxE)
 * 📝 *http headers* - [Additional data added to http requests for interperation within your backend code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+
+### Stretch Tutorial
+* 📝 [Auth Tokens and Simple Auth Server Setup](https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications)
