@@ -38,7 +38,7 @@ By the end of this module, learners should be able to:
 ----
 
 ## Guided Project Zoom Invitation:
-> **Unit 3 | Sprint 3 | Module 2: React Lifecycle**
+> **Unit 3 | Sprint 3 | Module 2: Client Authentication**
 > _______________________________________________________
 > Zoom Link : https://lambdaschool.zoom.us/my/unit3withwarren
 >
