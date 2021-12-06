@@ -1,8 +1,8 @@
 # Sprint 3 - Module 2 : Client Side Authentication
 
-## [Training Kit](https://github.com/LambdaSchool/Full-Stack-Web-Curriculum/tree/main/03-WebApplications-II/Sprint%2003%20-%20Advanced%20Web%20Applications/Module%202%20-%20Client-Side%20Auth)
+## [Training Kit](https://github.com/bloominstituteoftechnology/Full-Stack-Web-Curriculum/tree/main/03-WebApplications-II/Sprint%2003%20-%20Advanced%20Web%20Applications/Module%202%20-%20Client-Side%20Auth)
 
-### [Previous Lesson Plan](https://github.com/LambdaSchool/Web-GuidedProject-ClientSideAuth)
+### [Previous Lesson Plan](https://github.com/bloominstituteoftechnology/Web-GuidedProject-ClientSideAuth)
 
 ----
 
@@ -15,16 +15,16 @@ By the end of this module, learners should be able to:
 ----
 
 ## Instructor Resources
-* 🐙 [Guided Project Starter](https://github.com/LambdaSchool/web-guided-project-client-auth)
-* 🐙 [Guided Project Solution](https://github.com/LambdaSchool/web-guided-project-client-auth-solution)
-* 🐙 [Module Project](https://github.com/LambdaSchool/web-module-project-client-auth)
-* 🐙 [Module Project Solution](https://github.com/LambdaSchool/web-module-project-client-auth-solution)
+* 🐙 [Guided Project Starter](https://github.com/bloominstituteoftechnology/web-guided-project-client-auth)
+* 🐙 [Guided Project Solution](https://github.com/bloominstituteoftechnology/web-guided-project-client-auth-solution)
+* 🐙 [Module Project](https://github.com/bloominstituteoftechnology/web-module-project-client-auth)
+* 🐙 [Module Project Solution](https://github.com/bloominstituteoftechnology/web-module-project-client-auth-solution)
 
 ----
 
 ## Guided Project Slack Message
 > **Welcome Unit 3!**
-> 1. Clone without forking the following repo: https://github.com/LambdaSchool/web-guided-project-client-auth
+> 1. Clone without forking the following repo: https://github.com/bloominstituteoftechnology/web-guided-project-client-auth
 > 2. Navigate into both the server and client folders and run npm i to load dependences.
 >
 > :point_right: Technical issues spinning up the project? Please head over to the help channel!
@@ -40,13 +40,13 @@ By the end of this module, learners should be able to:
 ## Guided Project Zoom Invitation:
 > **Unit 3 | Sprint 3 | Module 2: Client Authentication**
 > _______________________________________________________
-> Zoom Link : https://lambdaschool.zoom.us/my/unit3withwarren
+> Zoom Link : https://bloominstituteoftechnology.zoom.us/my/unit3withwarren
 >
 > Slido: https://app.sli.do/event/msea4w8q
 >
-> Guided Project: https://github.com/LambdaSchool/web-guided-project-client-auth
+> Guided Project: https://github.com/bloominstituteoftechnology/web-guided-project-client-auth
 >
-> Module Project: https://github.com/LambdaSchool/web-module-project-client-auth
+> Module Project: https://github.com/bloominstituteoftechnology/web-module-project-client-auth
 
 ----
 
@@ -236,11 +236,9 @@ export const PrivateRoute = ({component: Component}, ...rest) => {
 **Here is a review of today's material.**
 
 ### Module Materials
-Module Project: https://github.com/LambdaSchool/web-module-project-client-auth
+Module Project: https://github.com/bloominstituteoftechnology/web-module-project-client-auth
 
 GP Slides: https://docs.google.com/presentation/d/1pWlfJhuZpeX054EgZGjElnWuzNPX2YQ1UXkUSw9QXBk/edit?usp=sharing
-
-Monday's Module Project Review: https://www.loom.com/share/e01d193711004a64ba265329f5337329 PW: lSwXpF
 
 Alternative GP Video: [Dustin Myers](https://youtu.be/ATr7QQP7lw4) | [Josh Jacobson](https://youtu.be/0AvJFNiqhD4)| [Warren C. Longmire](https://youtu.be/zVSH2n1wZCY) | [Brian Kirkby](https://youtu.be/hGICwuTH6Ag)
 
