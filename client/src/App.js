@@ -10,7 +10,7 @@ import axios from 'axios';
 function App() {
   const logout = () => {
     axios
-      .post("http://localhost:5000/api/logout", {userToken:localStorage.getItem('token')})
+      .post("http://localhost:5001/api/logout", {userToken:localStorage.getItem('token')})
       .then((res) => {
         localStorage.removeItem("token");
         window.location.href = "/login";
@@ -26,7 +26,7 @@ function App() {
             <Link to="/login">Login</Link>
           </li>
           <li>
-            <Link onClick={logout}>Logout</Link>
+            <Link onClick={logout} to="/login">Logout</Link>
           </li>
           <li>
             <Link to="/protected">Protected Page</Link>
